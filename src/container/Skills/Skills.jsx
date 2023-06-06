@@ -1,26 +1,130 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Tooltip as ReactTooltip }  from 'react-tooltip';
-
+import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
-import { urlFor, client } from '../../client';
+
 import './Skills.scss';
+
+
+// const skills= [
+//   {title:'web-development',description:'I am a Good Developer',projectLink:'www.google.com',codeLink:'www.youtube.com',imgUrl:images.about01},
+// ]
+
+
 
 const Skills = () => {
   const [experiences, setExperiences] = useState([]);
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "experiences"]';
-    const skillsQuery = '*[_type == "skills"]';
+    
 
-    client.fetch(query).then((data) => {
-      setExperiences(data);
-    });
+    const backendExperiences = [
+      {
+        year: '2023',
+        works: [
+          {
+            name: 'Accenture Virtual Experience (Developer) ',
+            company: 'Accenture',
+            desc: 'Work 1 description'
+          },
+          {
+            name: 'React Professional Certification',
+            company: 'Meta ',
+            desc: 'React Professional Certification'
+          }
+        ]
+      },
 
-    client.fetch(skillsQuery).then((data) => {
-      setSkills(data);
-    });
+      {
+        year: '2022',
+        works: [
+
+          {
+            name: 'MERN Stack (Training )',
+            company: 'CodeBetter Institute ',
+            desc: 'Web-Developer'
+          },
+          {
+            name: 'Php Web-developer (Intern)',
+            company: 'Soft-tech Solutions',
+            desc: 'Web-Developer'
+          },
+         
+        ]
+      },
+      {
+        year: '2021',
+        works: [
+          {
+            name: 'Calarts: Graphic Design Fundamentals',
+            company: 'Califorina Institute of Arts ',
+            desc: 'Work 3 description'
+          },
+        ]
+      },
+      {
+        year: '2020',
+        works: [
+          {
+            name: 'Higher Secondary Education (12th Sci)',
+            company: 'Presidency School',
+            desc: 'Work 3 description'
+          },
+        ]
+      },
+
+    ];
+    const backendSkills = [
+ 
+      {
+        name: 'C++',
+        bgColor: '#DDE6ED',
+        icon: images.cpp
+      },
+      {
+        name: 'HTML',
+        bgColor: '#DDE6ED',
+        icon: images.html
+      },
+      {
+        name: 'CSS',
+        bgColor: '#DDE6ED',
+        icon: images.css
+      },
+      {
+        name: 'Javascript',
+        bgColor: '#DDE6ED',
+        icon: images.javascript
+      },
+      {
+        name: 'Jquery',
+        bgColor: '#DDE6ED',
+        icon: images.jquery
+      },
+      {
+        name: 'React JS',
+        bgColor: '#DDE6ED',
+        icon: images.r
+      },
+      {
+        name: 'Redux',
+        bgColor: '#DDE6ED',
+        icon: images.redux
+      },
+      {
+        name: 'Node JS',
+        bgColor: '#DDE6ED',
+        icon: images.n
+      },
+   
+    
+     
+    ];
+
+    setExperiences(backendExperiences);
+    setSkills(backendSkills);
   }, []);
 
   return (
@@ -40,7 +144,7 @@ const Skills = () => {
                 className="app__flex"
                 style={{ backgroundColor: skill.bgColor }}
               >
-                <img src={urlFor(skill.icon)} alt={skill.name} />
+                <img src={skill.icon} alt={skill.name} />
               </div>
               <p className="p-text">{skill.name}</p>
             </motion.div>

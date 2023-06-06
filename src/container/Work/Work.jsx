@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { AiFillEye, AiFillGithub } from 'react-icons/ai';
+import React, {useState,useEffect } from 'react';
+import { AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
-
+import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
-import { urlFor, client } from '../../client';
+// import { urlFor, client } from '../../client';
 import './Work.scss';
 
 const Work = () => {
@@ -13,12 +13,53 @@ const Work = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
-    const query = '*[_type == "works"]';
+    // Simulating backend response
+    const backendWorks = [
+      {
+        title: 'Postman Clone',
+        description: 'A React-based Postman clone for simplifying API development, testing, and debugging with an intuitive user interface.',
+        codeLink: 'https://www.google.com',
+        projectLink: 'www.google.com',
+        imgUrl: images.react,
+        tags: ['React-JS', 'All']
+      },
+      {
+        title: 'File Sharing App',
+        description: 'A Node.js-based file sharing project that allows users to securely upload, share, and manage files with ease.',
+        codeLink: 'https://www.google.com',
+        projectLink: 'www.google.com',
+        imgUrl: images.node,
+        tags: ['Node-JS', 'All']
+      },
+      {
+        title: 'Full-Stack Web-App',
+        description: 'Full-Project',
+        codeLink: 'https://www.google.com',
+        projectLink: 'www.google.com',
+        imgUrl: images.full,
+        tags: ['Full-Stack', 'All']
+      },
+      {
+        title: 'IHBA Web-App',
+        description: 'A website for checking bed availability and facilities in hospitals, ensuring efficient access to healthcare resources.',
+        codeLink: 'https://www.google.com',
+        projectLink: 'www.google.com',
+        imgUrl: images.ihba,
+        tags: ['Minor-Project', 'All']
+      },
+      {
+        title: 'CultiMate',
+        description: 'A simple ML and DL based website which recommends the best crop to grow, fertilizers to use and the diseases caught by your crops.',
+        codeLink: 'https://github.com/Anushka177/Cultimate-final-project',
+        projectLink: 'www.google.com',
+        imgUrl: images.cultimate,
+        tags: ['Minor-Project', 'All']
+      },
+    
+    ];
 
-    client.fetch(query).then((data) => {
-      setWorks(data);
-      setFilterWork(data);
-    });
+    setWorks(backendWorks);
+    setFilterWork(backendWorks);
   }, []);
 
   const handleWorkFilter = (item) => {
@@ -41,7 +82,7 @@ const Work = () => {
       <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
 
       <div className="app__work-filter">
-        {['React-JS','Full-Stack','All'].map((item, index) => (
+        {['React-JS','Node-JS','Full-Stack','Minor-Project','All'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
@@ -62,24 +103,14 @@ const Work = () => {
             <div
               className="app__work-img app__flex"
             >
-              <img src={urlFor(work.imgUrl)} alt={work.name} />
+              <img src={work.imgUrl} alt={work.name} />
 
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
                 transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
                 className="app__work-hover app__flex"
               >
-                <a href={work.projectLink} target="_blank" rel="noreferrer">
-
-                  <motion.div
-                    whileInView={{ scale: [0, 1] }}
-                    whileHover={{ scale: [1, 0.90] }}
-                    transition={{ duration: 0.25 }}
-                    className="app__flex"
-                  >
-                    <AiFillEye />
-                  </motion.div>
-                </a>
+               
                 <a href={work.codeLink} target="_blank" rel="noreferrer">
                   <motion.div
                     whileInView={{ scale: [0, 1] }}

@@ -26,6 +26,18 @@ import about04 from '../assets/about04.png';
 import profile from '../assets/profile.png';
 import circle from '../assets/circle.svg';
 import logo from '../assets/logo.png';
+import n from '../assets/n.png';
+import r from '../assets/r.png';
+import cultimate from '../assets/cultimate.png';
+import ihba from '../assets/ihba.png';
+import back from '../assets/back.png';
+import front from '../assets/front.png';
+import full from '../assets/full.png';
+import graphic from '../assets/graphic.png';
+import jquery from '../assets/jquery.png';
+
+
+
 
 import adidas from '../assets/adidas.png';
 import amazon from '../assets/amazon.png';
@@ -34,9 +46,20 @@ import bolt from '../assets/bolt.png';
 import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
+import mail from '../assets/mail.png'
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
+  mail,
+  jquery,
+  back,
+  front,
+  full,
+  graphic,
+  ihba,
+  n,
+  r,
+  cultimate,
   email,
   mobile,
   api,
