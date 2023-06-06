@@ -18,7 +18,7 @@ const Work = () => {
       {
         title: 'Postman Clone',
         description: 'A React-based Postman clone for simplifying API development, testing, and debugging with an intuitive user interface.',
-        codeLink: 'https://www.google.com',
+        codeLink: 'https://github.com/ANSHJOSHI1811',
         projectLink: 'www.google.com',
         imgUrl: images.react,
         tags: ['React-JS', 'All']
@@ -26,7 +26,7 @@ const Work = () => {
       {
         title: 'File Sharing App',
         description: 'A Node.js-based file sharing project that allows users to securely upload, share, and manage files with ease.',
-        codeLink: 'https://www.google.com',
+        codeLink: 'https://github.com/ANSHJOSHI1811',
         projectLink: 'www.google.com',
         imgUrl: images.node,
         tags: ['Node-JS', 'All']
@@ -34,7 +34,7 @@ const Work = () => {
       {
         title: 'Full-Stack Web-App',
         description: 'Full-Project',
-        codeLink: 'https://www.google.com',
+        codeLink: 'https://github.com/ANSHJOSHI1811',
         projectLink: 'www.google.com',
         imgUrl: images.full,
         tags: ['Full-Stack', 'All']
@@ -42,7 +42,7 @@ const Work = () => {
       {
         title: 'IHBA Web-App',
         description: 'A website for checking bed availability and facilities in hospitals, ensuring efficient access to healthcare resources.',
-        codeLink: 'https://www.google.com',
+        codeLink: 'https://github.com/bhavika372/Indore-Hospitals---Copy-2-',
         projectLink: 'www.google.com',
         imgUrl: images.ihba,
         tags: ['Minor-Project', 'All']
