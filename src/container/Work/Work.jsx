@@ -55,7 +55,22 @@ const Work = () => {
         imgUrl: images.cultimate,
         tags: ['Minor-Project', 'All']
       },
-    
+      {
+        title: 'ToDo List',
+        description: 'Developed a dynamic and interactive Todo List using React to track and manage tasks efficiently.',
+        codeLink: 'https://github.com/ANSHJOSHI1811/Task_Tracker',
+        projectLink: 'www.google.com',
+        imgUrl: images.todo,
+        tags: ['React-JS', 'All']
+      },
+      {
+        title: 'Crypto Update',
+        description: 'Crafted a Crypto app utilizing API integration to provide real-time data on cryptocurrency prices, trends, and market information',
+        codeLink: 'https://github.com/ANSHJOSHI1811/crypto-update',
+        projectLink: 'www.google.com',
+        imgUrl: images.crypto,
+        tags: ['React-JS', 'All']
+      },
     ];
 
     setWorks(backendWorks);

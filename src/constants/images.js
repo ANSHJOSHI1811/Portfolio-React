@@ -19,11 +19,14 @@ import front from '../assets/front-min.png';
 import full from '../assets/full-min.png';
 import graphic from '../assets/graphic-min.png';
 import jquery from '../assets/jquery-min.png';
-
+import todo from '../assets/todo.png'
+import crypto from '../assets/bitcoin.png'
 import mail from '../assets/mail-min.png'
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
+  todo,
+  crypto,
   mail,
   jquery,
   back,
