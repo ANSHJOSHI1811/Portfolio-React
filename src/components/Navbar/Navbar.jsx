@@ -21,7 +21,7 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-      <a href="https://drive.google.com/file/d/1HKWayCdR2B6wbel6zMN-XMN8lEFJUzrs/view?usp=sharing" download><button style={{ backgroundColor: '#313bac', color: 'white', padding: '10px 12px', border: 'none',fontFamily:"DM Sans",fontWeight:'bold',cursor: 'pointer',
+      <a href="https://drive.google.com/file/d/1jWBKlAyxM9SMtHcaIEvbnTAVI9p4uBhN/view?usp=sharing" download><button style={{ backgroundColor: '#313bac', color: 'white', padding: '10px 12px', border: 'none',fontFamily:"DM Sans",fontWeight:'bold',cursor: 'pointer',
  borderRadius: '5px' }}>View Resume</button></a>
 
       <div className="app__navbar-menu">

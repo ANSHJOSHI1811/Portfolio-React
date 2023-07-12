@@ -4,14 +4,16 @@ import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import './About.scss';
 const abouts = [
-  {title:'React-Developer',description:'React developer adept at building dynamic web applications with modern JavaScript frameworks',imgUrl:images.front},
   {title:'Graphics-Designer',description:'Creative graphics designer skilled in visual storytelling and captivating design',imgUrl:images.graphic},
-  {title:'JS-Backend Developer',description:'Enthusiastic beginner JS Backend Developer eager to learn and contribute to building server-side applications.',imgUrl:images.back},
+  {title:'React-Developer',description:'React developer adept at building dynamic web applications with modern JavaScript frameworks',imgUrl:images.front},
+
+  {title:'Express Developer',description:'Enthusiastic beginner JS Backend Developer eager to learn and contribute to building server-side applications.',imgUrl:images.back},
 ]
 const About = () => {
   return (
     <>
-      <h2 className="head-text">Programmer in <span>Day</span> <br />Graphix Designer at <span>Night</span></h2>
+      <h2 className="head-text">
+      Bridging <span>creativity</span> and <span>functionality</span> with code</h2>
 
       <div className="app__profiles">
         {abouts.map((about, index) => (

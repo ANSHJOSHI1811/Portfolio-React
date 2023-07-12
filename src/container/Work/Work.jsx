@@ -1,5 +1,5 @@
 import React, {useState,useEffect } from 'react';
-import { AiFillGithub } from 'react-icons/ai';
+import { AiFillGithub ,AiOutlineLink} from 'react-icons/ai';
 import { motion } from 'framer-motion';
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
@@ -16,26 +16,42 @@ const Work = () => {
     // Simulating backend response
     const backendWorks = [
       {
+        title: 'MOVIX List',
+        description: 'Created a webApp where you can View Information About the Upcoming Movie',
+        codeLink: 'https://github.com/ANSHJOSHI1811/Task_Tracker',
+        projectLink: 'https://movixapp-one.vercel.app/',
+        imgUrl: images.movix,
+        tags: ['React-JS', 'All']
+      },
+      {
+        title: 'Youtube Clone',
+        description: 'Create a Youtube Clone using React-Redux and Customs Hooks ',
+        codeLink: 'https://github.com/ANSHJOSHI1811/Task_Tracker',
+        projectLink: 'https://youtubeeclone.vercel.app/',
+        imgUrl: images.yt,
+        tags: ['React-JS', 'All']
+      },
+      {
+        title: 'Crypto App',
+        description: 'Created Crypto Currency Tracking App using using React ',
+        codeLink: 'https://github.com/ANSHJOSHI1811/Task_Tracker',
+        projectLink: 'https://cryptocapp.vercel.app/',
+        imgUrl: images.crypto,
+        tags: ['React-JS', 'All']
+      },
+      {
         title: 'Postman Clone',
         description: 'A React-based Postman clone for simplifying API development, testing, and debugging with an intuitive user interface.',
         codeLink: 'https://github.com/ANSHJOSHI1811',
-        projectLink: 'www.google.com',
+        projectLink: 'https://postmancclone.vercel.app/',
         imgUrl: images.react,
         tags: ['React-JS', 'All']
       },
       {
-        title: 'File Sharing App',
-        description: 'A Node.js-based file sharing project that allows users to securely upload, share, and manage files with ease.',
+        title: 'Pious E-Commerce',
+        description: 'Created a MERN Stack Project using MVC Archtecut',
         codeLink: 'https://github.com/ANSHJOSHI1811',
-        projectLink: 'www.google.com',
-        imgUrl: images.node,
-        tags: ['Node-JS', 'All']
-      },
-      {
-        title: 'Full-Stack Web-App',
-        description: 'Full-Project',
-        codeLink: 'https://github.com/ANSHJOSHI1811',
-        projectLink: 'www.google.com',
+        projectLink: 'https://difficult-bikini-toad.cyclic.app/login',
         imgUrl: images.full,
         tags: ['Full-Stack', 'All']
       },
@@ -43,7 +59,7 @@ const Work = () => {
         title: 'IHBA Web-App',
         description: 'A website for checking bed availability and facilities in hospitals, ensuring efficient access to healthcare resources.',
         codeLink: 'https://github.com/bhavika372/Indore-Hospitals---Copy-2-',
-        projectLink: 'www.google.com',
+        projectLink: 'https://github.com/bhavika372/Indore-Hospitals---Copy-2-',
         imgUrl: images.ihba,
         tags: ['Minor-Project', 'All']
       },
@@ -51,7 +67,7 @@ const Work = () => {
         title: 'CultiMate',
         description: 'A simple ML and DL based website which recommends the best crop to grow, fertilizers to use and the diseases caught by your crops.',
         codeLink: 'https://github.com/Anushka177/Cultimate-final-project',
-        projectLink: 'www.google.com',
+        projectLink: 'https://github.com/Anushka177/Cultimate-final-project',
         imgUrl: images.cultimate,
         tags: ['Minor-Project', 'All']
       },
@@ -63,14 +79,7 @@ const Work = () => {
         imgUrl: images.todo,
         tags: ['React-JS', 'All']
       },
-      {
-        title: 'Crypto Update',
-        description: 'Crafted a Crypto app utilizing API integration to provide real-time data on cryptocurrency prices, trends, and market information',
-        codeLink: 'https://github.com/ANSHJOSHI1811/crypto-update',
-        projectLink: 'www.google.com',
-        imgUrl: images.crypto,
-        tags: ['React-JS', 'All']
-      },
+   
     ];
 
     setWorks(backendWorks);
@@ -94,10 +103,10 @@ const Work = () => {
 
   return (
     <>
-      <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
+      <h2 className="head-text">My Creative <span>Work</span> Section</h2>
 
       <div className="app__work-filter">
-        {['React-JS','Node-JS','Full-Stack','Minor-Project','All'].map((item, index) => (
+        {['React-JS','Full-Stack','Minor-Project','All'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
@@ -134,6 +143,16 @@ const Work = () => {
                     className="app__flex"
                   >
                     <AiFillGithub />
+                  </motion.div>
+                </a>
+                <a href={work.projectLink} target="_blank" rel="noreferrer">
+                  <motion.div
+                    whileInView={{ scale: [0, 1] }}
+                    whileHover={{ scale: [1, 0.90] }}
+                    transition={{ duration: 0.25 }}
+                    className="app__flex"
+                  >
+                    <AiOutlineLink/>
                   </motion.div>
                 </a>
               </motion.div>

@@ -29,8 +29,8 @@ const Header = () => {
   </div>
   
   <div className='tag-cmp app__flex'>
-  <p className='p-text'>Web-Developer</p>
-  <p className='p-text'>Graphix Designer  </p>
+  <p className='p-text'>Designer </p>
+  <p className='p-text'>React-Developer</p>
 
   </div>
 </div>
@@ -38,14 +38,13 @@ const Header = () => {
 
 <motion.div 
 whileInView={{opacity:[0,1]}}  
-transition={{duration:0.5 ,delayChildren:0.5}}
+transition={{duration:0.3 ,delayChildren:0.3}}
 className='app__header-img'>
-<img src={images.profile} alt="profile_bg"/>
+<img src={images.profile}/>
 <motion.img
         whileInView={{ scale: [0, 1] }}
         transition={{ duration: 1, ease: 'easeInOut' }}
         src={images.circle}
-        alt="profile_circle"
         className="overlay_circle"
       />
 </motion.div>
@@ -56,7 +55,7 @@ className='app__header-img'>
     >
       {[images.r, images.redux, images.n].map((circle, index) => (
         <div className="circle-cmp app__flex" key={`circle-${index}`}>
-          <img src={circle} alt="profile_bg" />
+          <img src={circle} />
         </div>
       ))}
     </motion.div>
